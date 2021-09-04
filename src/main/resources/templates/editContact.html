@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create user</title>
+</head>
+<body>
+<div align="center">
+    <h1> Edit Contact</h1>
+<form action="#" th:action="@{/editContact}" th:object="${contact}" method="POST">
+    <table cellpadding="5">
+        <tr>
+            <td><label for="id">ID</label></td>
+            <td><input readonly type="number" th:field="*{id}" id="id"></td>
+        </tr>
+        <tr>
+            <td><label for="name">Name</label></td>
+            <td><input type="text" th:field="*{name}" id="name"></td>
+        </tr>
+            <td><label for="email">Email</label></td>
+            <td><input type="text" th:field="*{email}" id="email"></td>
+        <tr>
+            <td><label for="address">Address</label></td>
+            <td><input type="text" th:field="*{address}" id="address"></td>
+        </tr>
+        <tr>
+            <td><label for="phone">Phone</label></td>
+            <td><input type="text" th:field="*{phone}" id="phone"></td>
+        </tr>
+        <td colspan="2" align="center"><input type="submit" value="Save"></td>
+    </table>
+</form>
+</div>
+</body>
+</html>
+
+
